@@ -1,0 +1,140 @@
+.circ{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    margin-left: 600px;
+    margin-top : 250px;
+    background-color:rgb(102, 99, 99);
+    border: 2px solid rgb(102, 99, 99);
+    border-radius: 100%;
+    cursor: pointer;
+    z-index: 1;
+}
+
+body{
+    background-color: white;
+}
+
+.mask{
+  background-color: rgba(39, 39, 39, 0.2);
+}
+.txt{
+    font-family: 'Courier New', Courier, monospace;
+    color: aliceblue;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 100px;
+    text-decoration: none;
+}
+
+a { 
+  outline: none; 
+  border: 0; 
+  text-decoration: none; 
+
+}
+
+
+.pop1:hover{
+    background-color: rgb(53, 51, 51);
+    transform: scale(1.1) ;
+    transition-property: background-color,transform;
+    transition-duration: 100ms;
+    transition-timing-function: ease-in-out;
+
+}
+
+.pop2:hover{
+    background-color: rgb(53, 51, 51);
+    transform: scale(0.6) ;
+    transition-property: background-color,transform;
+    transition-duration: 100ms;
+    transition-timing-function: ease-in-out;
+}
+
+
+
+.scaleup{
+    transform:scale(1);
+    transition :transform ease-out 100ms;
+}
+
+
+.scaledo{
+    transform:scale(0.5);
+    transition :transform ease-out 100ms;
+}
+
+li{
+    width:100px;  
+    height: 100px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+
+.anim {
+    transition-property: transform;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in-out;
+  }
+
+
+  .fadin{
+    animation-name: fadein;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in;
+    animation-fill-mode: none;
+  }
+
+  .fadout{
+    animation-name: fadeout;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in;
+    animation-fill-mode: backwards;
+
+  }
+  .fadin:hover::before{
+    transform:scale(2);
+    transition :transform ease-out 100ms;
+  }
+
+
+  @keyframes fadein {
+    0% { opacity: 0; }
+    50% { opacity: 0.2; }
+    100% { opacity: 0.8; }
+  }
+  
+  @keyframes fadeout {
+    0% { opacity: 0.8; }
+    50% { opacity: 0.2; }
+    50% { opacity: 0.1; }
+    100% { opacity: 0; }
+  }
+
+  .bg-overlay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+    min-width: 100px;
+    }
+
+
+svg #cont1, svg #edu,svg #cert,svg #intro ,svg #res, svg #exp{
+    fill:aliceblue;
+}
+
+
+
+#pulse:hover{
+    animation: pulse 0.5s ease-in infinite;
+  }
+
+  @keyframes pulse{
+    25%  {transform: scale(0.9);}
+    75%  {transform: scale(1.1);}
+  }
