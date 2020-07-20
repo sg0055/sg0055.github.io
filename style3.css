@@ -1,7 +1,7 @@
 .circ{
     width: 150px;
     height: 150px;
-    position: absolute;
+    position: relative;
     margin-left: 600px;
     margin-top : 250px;
     background-color:rgb(102, 99, 99);
